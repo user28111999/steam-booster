@@ -1,0 +1,25 @@
+{
+  "name": "steam-boost",
+  "version": "4.2.0",
+  "description": "A Steam bot written in Node.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunseok/steam-boost.git"
+  },
+  "author": "yunseok",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/yunseok/steam-boost/issues"
+  },
+  "homepage": "https://github.com/yunseok/steam-boost#readme",
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "path": "^0.12.7",
+    "readline-sync": "^1.4.10",
+    "steam-totp": "^2.1.0",
+    "steam-user": "^4.12.2"
+  }
+}
