@@ -10,6 +10,13 @@
 
 A simple Steam hour booster using Node.js
 
+I recommend using a cloud service such as [Heroku](https://www.heroku.com/) to host your bots. 
+
+<a href="https://yunseok.dev" target="_blank">
+  <img src="https://i.imgur.com/KvmWbrA.gif">
+</a>
+
+
 ## Installation
 
 Use [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/en/) to install steam-booster
