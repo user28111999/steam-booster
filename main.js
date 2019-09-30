@@ -1,23 +1,24 @@
-const fs = require("file-system");
-const path = require("path").join(__dirname, "users");
-const steamClient = require('./client.js');
+var SteamUser = require('steam-user');
+var SteamTOTP = require('steam-totp');
+var UserConfig = require('./user.json');
 
-const configsArray = [];
-const botArray = [];
+setTimeout(function () {
+	process.exit(0);
+}, 1000 * 3600 * 2);
 
-fs.readdirSync(path).forEach(function(file) {
-  const user = require("./users/" + file);
-  configsArray.push(user);
+var client = new SteamUser();
+
+var userConfig = {
+	'accountName': UserConfig.account_name,
+	'password': UserConfig.password,
+	'twoFactorCode': SteamTOTP.generateAuthCode(UserConfig.shared_secret)
+};
+
+client.logOn(userConfig);
+
+client.on('loggedOn', function(details) {
+	console.log('Success!')
+	client.webLogOn();
+	client.setPersona(1);
+	client.gamesPlayed(UserConfig.playing)
 });
-
-console.log('Number of bots running: ' + configsArray.length);
- 
-for	(index = 0; index < configsArray.length; index++) {
-	const config = configsArray[index];
-	
-	const bot = steamClient.newBot(config);
-	bot.doLogin();
-	botArray.push(bot);
-}
-
-console.log('Currently running ' + botArray.length + ' bot(s)');

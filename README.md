@@ -28,9 +28,7 @@ yarn install # IF YOU USE YARN
 
 ## Usage
 
-Create a bot by creating a `.json` file in the `users/` directory
-
-See `users/user.json.example` for an example
+Edit the `.json` and adjust it to your needs. Make `shared_secret` and `identity_secret` NULL, if you use e-mail verification.
 
 ```bash
 npm start # IF YOU USE NPM

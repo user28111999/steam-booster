@@ -1,6 +1,4 @@
 node_modules/
-temp/
-users/audiovideodisco.json
 
 # Weird issue...
 package-lock.json
