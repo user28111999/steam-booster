@@ -16,6 +16,7 @@ I recommend using a cloud service such as [Heroku](https://www.heroku.com/) to h
   <img src="https://i.imgur.com/KvmWbrA.gif">
 </a>
 
+<b>WARNING: You can only idle 32 games at the same time!</b>
 
 ## Installation
 
